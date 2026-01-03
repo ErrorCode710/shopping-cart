@@ -1,0 +1,12 @@
+.hero-title {
+  font-size: var(--space-lg);
+  text-align: center;
+}
+.title-highlight {
+  color: var(--clr-accent);
+}
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

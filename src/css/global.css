@@ -1,0 +1,48 @@
+@font-face {
+  font-family: SF;
+  src: url("../assets/font/SF-Pro.ttf");
+}
+
+body {
+  font-family: "SF";
+}
+
+:root {
+  /* Base clrs */
+  --clr-light-bg: rgb(253, 251, 238); /* off-white */
+  --clr-teal: rgb(87, 180, 186);
+  --clr-teal-dark: rgb(1, 85, 81);
+  --clr-accent: rgb(254, 79, 45);
+
+  /* Shades for Light Background */
+  --clr-light-bg-50: rgb(255, 255, 250);
+  --clr-light-bg-100: rgb(253, 251, 238);
+  --clr-light-bg-200: rgb(245, 243, 230);
+
+  /* Shades for Teal */
+  --clr-teal-50: rgb(197, 229, 230);
+  --clr-teal-100: rgb(147, 208, 210);
+  --clr-teal-200: rgb(87, 180, 186);
+  --clr-teal-300: rgb(45, 135, 140);
+  --clr-teal-400: rgb(1, 85, 81);
+
+  /* Shades for Accent */
+  --clr-accent-40: rgb(255 237 233);
+  --clr-accent-50: rgb(255, 170, 150);
+  --clr-accent-100: rgb(255, 120, 95);
+  --clr-accent-200: rgb(254, 79, 45);
+  --clr-accent-300: rgb(200, 60, 30);
+
+  /* Neutral / Text clrs */
+  --clr-text-light: rgb(245, 245, 245);
+  --clr-text-dark: rgb(20, 20, 20);
+
+  /* Spacing scale (Golden Ratio – rem based) */
+  --space-xxs: 0.25rem;
+  --space-xs: 0.375rem;
+  --space-sm: 0.625rem;
+  --space-md: 1rem;
+  --space-lg: 1.625rem;
+  --space-xl: 2.625rem;
+  --space-2xl: 4.25rem;
+}
