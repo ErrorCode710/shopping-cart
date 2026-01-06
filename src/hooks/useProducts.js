@@ -8,7 +8,10 @@ export function useProducts() {
 
   useEffect(() => {
     fetchProducts()
-      .then(setData)
+      .then((result) => {
+        console.log("FETCH RESULT:", result);
+        setData(result);
+      })
       .catch(error)
       .finally(() => setLoading(false));
   }, []);

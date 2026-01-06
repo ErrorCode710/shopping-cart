@@ -9,4 +9,6 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
 }
