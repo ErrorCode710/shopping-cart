@@ -1,9 +1,11 @@
 import style from "./Checkout.module.css";
 import img from "../../assets/mock.png";
 
-function Checkout({ productImg, productTitle, productPrice, increment, onQuantityChange, itemValue }) {
+function Checkout({ productImg, productTitle, productPrice, increment, onQuantityChange, itemValue, onClick }) {
   // console.log("CHECKOUT DETAILS", productImg, productTitle, productPrice);
 
+  console.log("ITEMVALUE", itemValue);
+  const isQuantityZero = itemValue === "0";
   return (
     <div className={style["checkout"]}>
       <div className={style["product-imagewrapper"]}>
@@ -12,13 +14,20 @@ function Checkout({ productImg, productTitle, productPrice, increment, onQuantit
       <div className={style["product-content"]}>
         <p className={style["product-title"]}>{productTitle}</p>
         <p className={style["product-price"]}>${productPrice}</p>
-        <input
-          className={style["product-quantity"]}
-          min="1"
-          type="number"
-          value={itemValue}
-          onChange={(e) => onQuantityChange(e.target.value)}
-        />
+        <div className={style["product-quantity-container"]}>
+          <input
+            className={style["product-quantity"]}
+            type="number"
+            min="0"
+            value={itemValue}
+            onChange={(e) => onQuantityChange(e.target.value)}
+          />
+          {isQuantityZero && (
+            <button className={style["remove-btn"]} onClick={() => onClick()}>
+              Remove
+            </button>
+          )}
+        </div>
       </div>
       <div className={style["product-wholePrice"]}>
         <p className={style["product-price"]}>${productPrice * itemValue}</p>

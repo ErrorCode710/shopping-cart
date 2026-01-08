@@ -3,6 +3,7 @@
   gap: var(--space-md);
   align-items: flex-start; /* don’t stretch vertically */
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 .cart-wrapper {
   margin: 5rem;

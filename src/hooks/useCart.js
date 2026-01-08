@@ -39,11 +39,17 @@ export function useCart() {
       prevItems.map((item) => (item.productId === id ? { ...item, quantity: quantityValue } : item))
     );
   }
+  function removeCartItem(id) {
+    setCartItems((prevItems) => prevItems.filter((item) => item.productId !== id));
+  }
+  // function total(){
+
+  // }
   function increment(id) {
     // find the id on the cartItems copy the chaneg the quantity by 1
     setCartItems((prevItems) =>
       prevItems.map((item) => (item.productId === id ? { ...item, quantity: item.quantity + 1 } : item))
     );
   }
-  return { cartItems, addToCart, cartCount, increment, setCartItems, updateQuantity };
+  return { cartItems, addToCart, cartCount, increment, setCartItems, updateQuantity, removeCartItem };
 }
