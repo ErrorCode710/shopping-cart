@@ -2,7 +2,7 @@ import style from "./Hero.module.css";
 import Card from "../Card/index";
 import { useProducts } from "../../hooks/useProducts";
 
-function Hero() {
+function Hero({ addToCart }) {
   const { data, loading, error } = useProducts();
 
   const selectedProduct = [data[0], data[5], data[8]];
@@ -20,7 +20,12 @@ function Hero() {
       <section className={style["card-wrapper"]}>
         {selectedProduct.map((product) => (
           <article key={product.id}>
-            <Card productImg={product.image} productTitle={product.title} productPrice={product.price}></Card>
+            <Card
+              productImg={product.image}
+              productTitle={product.title}
+              productPrice={product.price}
+              onClick={() => addToCart(product.id)}
+            ></Card>
           </article>
         ))}
         {/* <article>

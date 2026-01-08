@@ -15,7 +15,7 @@ function AppWrapper() {
   const { data: products, loading, error } = useProducts();
 
   // Cart state
-  const { cartItems, addToCart } = useCart();
+  const { cartItems, addToCart, increment, setCartItems, updateQuantity } = useCart();
 
   const router = createBrowserRouter([
     {
@@ -28,7 +28,16 @@ function AppWrapper() {
     },
     {
       path: "/cart",
-      element: <Cart cartItems={cartItems} addToCart={addToCart} />,
+      element: (
+        <Cart
+          cartItems={cartItems}
+          addToCart={addToCart}
+          products={products}
+          increment={increment}
+          setCartItems={setCartItems}
+          updateQuantity={updateQuantity}
+        />
+      ),
     },
   ]);
 

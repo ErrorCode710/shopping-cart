@@ -3,7 +3,8 @@ import style from "./Header.module.css";
 import { Link, NavLink } from "react-router";
 import { useCart } from "../../hooks/useCart";
 
-function Header({ cartItems }) {
+
+function Header({ cartItems = [] }) {
   const cartCount = cartItems.length;
   return (
     <nav className={style.header}>
