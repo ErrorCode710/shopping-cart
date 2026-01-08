@@ -1,7 +1,7 @@
 import style from "./Checkout.module.css";
 import img from "../../assets/mock.png";
 
-function Checkout({ productImg, productTitle, productPrice, increment, onQuantityChange, itemValue, onClick }) {
+function Checkout({ productImg, productTitle, productPrice, onQuantityChange, itemValue, onClick }) {
   // console.log("CHECKOUT DETAILS", productImg, productTitle, productPrice);
 
   console.log("ITEMVALUE", itemValue);
